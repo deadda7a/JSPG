@@ -7,3 +7,4 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/58b56fd0a512bd00419f232f/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58b56fd0a512bd00419f232f)
 
 A simple PHP Gallery I wrote to practice. Note that I still suck at programming.
+This project uses the [MINI3 Framework](https://github.com/panique/mini3)
