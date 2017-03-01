@@ -11,3 +11,4 @@ ratings:
 exclude_paths:
   - "**/vendor/**/*"
   - "**/node_modules/**/*"
+  - "**/application/Core/**/*"
