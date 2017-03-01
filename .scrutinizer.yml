@@ -3,3 +3,6 @@ checks:
         code_rating: true
         duplication: true
 
+filter:
+    excluded_paths:
+        - application/Core*
