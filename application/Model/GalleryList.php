@@ -17,17 +17,27 @@ use Mini\Core\Model;
 class GalleryList extends Model
 {
 	private $galleryPaths;
+	private $galleries;
 
 	/**
 	 * GalleryList constructor.
 	 */
 	public function __construct() {
+		$this->galleries = array();
+
 		parent::__construct();
 		self::fillGalleryPaths();
+		self::fillGalleries();
 	}
 
 	private function fillGalleryPaths () {
 		$this->galleryPaths = $this->fileSystemHelper->scanDirForSubfolders($this->imageFolder);
+	}
+
+	private function fillGalleries () {
+		foreach ($this->galleryPaths as $galleryPath) {
+			array_push($this->galleries, new Gallery($galleryPath));
+		}
 	}
 
 	public function getGalleryPaths () {

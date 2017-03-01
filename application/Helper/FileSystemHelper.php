@@ -15,4 +15,16 @@ class FileSystemHelper {
 
 		return $folders;
 	}
+
+	public function parseInfoJson ($infoFile) {
+		if(file_exists($infoFile)) {
+			$fileContent = file_get_contents($infoFile);
+
+			if($array = json_decode($fileContent, true)) {
+				return $array;
+			}
+		}
+
+		return false;
+	}
 }

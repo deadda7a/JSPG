@@ -1,3 +1,8 @@
 <?php
 
-$config['imageFolder'] = 'Bilder';
+$config = [
+	"imageFolder" => "Bilder",
+];
+
+
+return $config;

@@ -18,8 +18,7 @@ class UserConfig {
 	}
 
 	private function readUserConfig () {
-		require_once(START_DIR . "Config.php");
-		$this->userConfig = $config;
+		$this->userConfig = require_once(START_DIR . "Config.php");
 	}
 
 	private function sanitizeUserConfig () {
