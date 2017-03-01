@@ -6,7 +6,7 @@
  * Time: 5:58 PM
  */
 
-namespace Mini\Model;
+namespace Mini\Helper;
 
 class FileSystemHelper {
 	public function scanDirForSubfolders ($dir) {

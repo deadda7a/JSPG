@@ -9,6 +9,15 @@
 namespace Mini\Model;
 
 
-class Gallery {
+class Gallery extends Model {
+	private $path;
+	private $pictures;
+	private $name;
+	private $author;
+
+	public function __construct() {
+		parent::__construct();
+	}
+
 
 }

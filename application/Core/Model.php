@@ -2,7 +2,7 @@
 
 namespace Mini\Core;
 use Mini\Helper\UserConfig;
-use Mini\Model\FileSystemHelper;
+use Mini\Helper\FileSystemHelper;
 
 class Model
 {

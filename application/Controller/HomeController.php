@@ -11,19 +11,11 @@
 
 namespace Mini\Controller;
 
-use Mini\Model\GalleryList;
-
 class HomeController
 {
-	private $galleryList;
-
     public function index()
     {
-		$this->galleryList = new GalleryList();
-
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/home/index.php';
-        require APP . 'view/_templates/footer.php';
-    }
+		header('Location: ' . URL . 'Gallerylist');
+	}
 
 }
