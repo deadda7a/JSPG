@@ -10,10 +10,10 @@ namespace Mini\Controller;
 use Mini\Model\GalleryList;
 
 class GallerylistController {
-	private $galleryList;
+	private $galleryPaths;
 
 	public function index() {
-		$this->galleryList = new GalleryList();
+		$this->galleryPaths = new GalleryList();
 
 		require APP . 'view/_templates/header.php';
 		require APP . 'view/galleryList/index.php';

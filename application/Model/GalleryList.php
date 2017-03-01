@@ -16,21 +16,21 @@ use Mini\Core\Model;
 
 class GalleryList extends Model
 {
-	private $galleryList;
+	private $galleryPaths;
 
 	/**
 	 * GalleryList constructor.
 	 */
 	public function __construct() {
 		parent::__construct();
-		self::fillGalleryList();
+		self::fillGalleryPaths();
 	}
 
-	private function fillGalleryList () {
-		$this->galleryList = $this->fileSystemHelper->scanDirForSubfolders($this->imageFolder);
+	private function fillGalleryPaths () {
+		$this->galleryPaths = $this->fileSystemHelper->scanDirForSubfolders($this->imageFolder);
 	}
 
-	public function getGalleryList () {
-		return $this->galleryList;
+	public function getGalleryPaths () {
+		return $this->galleryPaths;
 	}
 }

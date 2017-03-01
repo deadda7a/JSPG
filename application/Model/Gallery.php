@@ -8,7 +8,6 @@
 
 namespace Mini\Model;
 
-
 class Gallery extends Model {
 	private $path;
 	private $pictures;

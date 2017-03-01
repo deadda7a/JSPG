@@ -1,7 +1,7 @@
 <pre>
 <?php
 	var_dump(
-		$this->galleryList
+		$this->galleryPaths
 	);
 ?>
 </pre>
