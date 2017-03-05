@@ -2,6 +2,7 @@
 
 $config = [
 	"imageFolder" => "Bilder",
+	"defaultAuthor" => "Anonymous"
 ];
 
 

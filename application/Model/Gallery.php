@@ -11,18 +11,20 @@ namespace Mini\Model;
 use Mini\Core\Model;
 
 class Gallery extends Model {
-	private $path;
+	private $fullPath;
+	private $folder;
 	private $infoFile;
 	private $pictures;
 	private $name;
 	private $author;
 
-	public function __construct($path) {
+	public function __construct($fullPath) {
 		parent::__construct();
 
-		$this->path = $path;
-		$this->infoFile = $this->path . '/info.json';
+		$this->fullPath = $fullPath;
+		$this->infoFile = $this->fullPath . '/info.json';
 
+		$this->folder = "Nix";
 
 		$this->fillName();
 		$this->fillAuthor();
@@ -32,7 +34,7 @@ class Gallery extends Model {
 		if ($array = $this->fileSystemHelper->parseInfoJson($this->infoFile)) {
 			$this->name = $array['name'];
 		} else {
-			$this->name = $this->path;
+			$this->name = $this->folder;
 		}
 	}
 
@@ -40,12 +42,12 @@ class Gallery extends Model {
 		if ($array = $this->fileSystemHelper->parseInfoJson($this->infoFile)) {
 			$this->author = $array['author'];
 		} else {
-			$this->author = "Anonymous";
+			$this->author = $this->defaultAuthor;
 		}
 	}
 
-	public function getPath () {
-		return $this->path;
+	public function getFullPath () {
+		return $this->fullPath;
 	}
 
 	public function getName () {
